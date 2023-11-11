@@ -9,15 +9,10 @@ To store data to dropbox, replace the property attribute "local" in the body tag
 ```html
 <!-- before -->
 <body [...] mv-storage="local" mv-format="csv" [...]>
-  <!-- after -->
-  <body
-    [...]
-    mv-storage="https://www.dropbox.com/path/to/the/file/"
-    mv-plugins="dropbox"
-    mv-format="csv"
-    [...]
-  ></body>
-</body>
+
+<!-- after -->
+<body [...] mv-storage="https://www.dropbox.com/path/to/the/file/" mv-plugins="dropbox" mv-format="csv" [...]>
+
 ```
 
 If you want to store your entries to another remote backend (e.g. github) take a look at the [offical Mavo documentation](https://mavo.io/docs/storage).
