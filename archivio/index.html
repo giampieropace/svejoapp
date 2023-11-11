@@ -5,9 +5,13 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
    <title>svejoapp</title>
+   <meta name="theme-color" content="#3a3f44">
+   <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/svejoapp-small.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/svejoapp.png">
    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
    <link rel="stylesheet" href="../assets/css/mavo.css">
    <link rel="stylesheet" href="../assets/css/custom.css">
+   <link rel="manifest" href="/manifest.json">
    <script src="../assets/js/mavo.min.js"></script>
    <script src="../assets/js/mavo-dropbox.js"></script>
 
@@ -31,7 +35,9 @@
       <div class="row d-flex justify-content-md-center">
          <div class="col d-flex flex-column justify-content-center py-4 pt-2" style="max-width: 576px;">
 
-            <div class="mv-bar mv-ui"></div>
+            <div class="mv-bar mv-ui">
+               <a class="mv-export mv-button" download="svejoapp.json">JSON Export</a>
+            </div>
 
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Ricerca per data..">
 

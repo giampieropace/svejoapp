@@ -1,0 +1,1 @@
+{"short_name":"Svejo","name":"Svejo App","icons":[{"src":"/assets/img/svejoapp-small.png","type":"image/png","sizes":"192x192"},{"src":"/assets/img/svejoapp.png","type":"image/png","sizes":"512x512"}],"start_url":"index.html","background_color":"#9fa2a3","theme_color":"#3a3f44","display":"fullscreen","orientation":"portrait"}

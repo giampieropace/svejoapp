@@ -1,3 +1,43 @@
+:root,
+[data-bs-theme="light"] {
+  --bs-primary: #3a3f44;
+  --bs-primary-rgb: 58, 63, 68;
+  --bs-primary-text-emphasis: #17191b;
+  --bs-primary-bg-subtle: #d8d9da;
+  --bs-primary-border-subtle: #b0b2b4;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #3a3f44;
+  --bs-btn-border-color: #3a3f44;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #31363a;
+  --bs-btn-hover-border-color: #2e3236;
+  --bs-btn-focus-shadow-rgb: 225, 226, 227;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #2e3236;
+  --bs-btn-active-border-color: #2c2f33;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #3a3f44;
+  --bs-btn-disabled-border-color: #3a3f44;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #3a3f44;
+  --bs-btn-border-color: #3a3f44;
+  --bs-btn-focus-shadow-rgb: 58, 63, 68;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #3a3f44;
+  --bs-btn-hover-border-color: #3a3f44;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #3a3f44;
+  --bs-btn-active-border-color: #3a3f44;
+  --bs-btn-disabled-color: #3a3f44;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #3a3f44;
+}
+
 [mv-app] button.mv-add {
   display: none;
 }
@@ -76,8 +116,4 @@
 #myTable tr:hover {
   /* Add a grey background color to the table header and on hover */
   background-color: #f1f1f1;
-}
-
-.mv-popup {
-  max-width: 120px;
 }
