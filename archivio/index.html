@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+   <title>svejoapp</title>
+   <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../assets/css/mavo.css">
+   <link rel="stylesheet" href="../assets/css/custom.css">
+   <script src="../assets/js/mavo.min.js"></script>
+   <script src="../assets/js/mavo-dropbox.js"></script>
+
+</head>
+
+<body style="color: var(--bs-body-color);background: var(--bs-body-bg);font-size: 1.1rem;" mv-app="svejoapp"
+   mv-storage="local" mv-format="csv" mv-mode="read" mv-bar="status export login logout">
+
+   <!-- Header -->
+   <div class="container py-4 px-5 ps-3 pe-3" style="max-width: 576px;">
+      <div class="row">
+         <div class="col d-flex justify-content-center align-items-center">
+            <h1 class="text-capitalize fw-bold" style="font-size: 2rem;"><a href="/" class="text-decoration-none">Svejo
+                  app</a></h1>
+         </div>
+      </div>
+   </div>
+
+   <!-- main -->
+   <div class="container">
+      <div class="row d-flex justify-content-md-center">
+         <div class="col d-flex flex-column justify-content-center py-4 pt-2" style="max-width: 576px;">
+
+            <div class="mv-bar mv-ui"></div>
+
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Ricerca per data..">
+
+
+            <div class="table-responsive">
+               <table class="table" id="myTable">
+                  <thead>
+                     <tr>
+                        <th>Data</th>
+                        <th>Ora</th>
+                        <th>Oste</th>
+                        <th>Servito</th>
+                     </tr>
+                  </thead>
+                  <tbody mv-list mv-order="desc" class="mavo__list">
+                     <tr mv-list-item property="entry">
+                        <td property="data"></td>
+                        <td property="ora"></td>
+                        <td property="oste"></td>
+                        <td property="servizio"></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+   <script>
+      function myFunction() {
+         // Declare variables
+         var input, filter, table, tr, td, i, txtValue;
+         input = document.getElementById("myInput");
+         filter = input.value.toUpperCase();
+         table = document.getElementById("myTable");
+         tr = table.getElementsByTagName("tr");
+
+         // Loop through all table rows, and hide those who don't match the search query
+         for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+               txtValue = td.textContent || td.innerText;
+               if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+               } else {
+                  tr[i].style.display = "none";
+               }
+            }
+         }
+      }
+   </script>
+</body>
+
+</html>

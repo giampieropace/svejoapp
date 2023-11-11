@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>svejoapp</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/mavo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <script src="assets/js/mavo.min.js"></script>
+    <script src="assets/js/mavo-dropbox.js"></script>
+
+</head>
+
+<body style="color: var(--bs-body-color);background: var(--bs-body-bg);font-size: 1.1rem;" mv-app="svejoapp"
+    mv-storage="local" mv-format="csv" mv-mode="edit" mv-bar="status save login logout">
+
+    <!-- Header -->
+    <div class="container py-4 px-5 ps-3 pe-3" style="max-width: 576px;">
+        <div class="row">
+            <div class="col d-flex justify-content-center align-items-center">
+                <h1 class="text-capitalize fw-bold" style="font-size: 2rem;"><a href="/"
+                        class="text-decoration-none">Svejo app</a></h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- main -->
+    <div class="container">
+        <div class="row d-flex justify-content-md-center">
+            <div class="col d-flex flex-column justify-content-center py-4 pt-2" style="max-width: 576px;">
+
+                <div class="mv-bar mv-ui">
+                    <button class="mv-save">Salva</button>
+                </div>
+
+                <!-- Pulsante aggiungi -->
+                <button class="btn btn-success my-4" type="button" mv-action="add(entry)">Aggiungi</button>
+
+
+                <!-- Mavo List -->
+                <div mv-list mv-order="desc" class="mavo__list">
+
+                    <!-- Mavo List Item -->
+                    <div class="card my-3 mavo__entry" mv-list-item property="entry">
+                        <div class="card-body">
+
+                            <!-- Riga data e ora -->
+                            <div class="mt-0">
+                                <div class="row">
+                                    <div class="col d-flex justify-content-start ps-4">
+                                        <p><span>🗓</span> <time property="data"></time> </p>
+                                    </div>
+                                    <div class="col d-flex justify-content-start pe-4">
+                                        <p><span>🕒</span> <time datetime="20:00" property="ora"></time></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Riga oste cibo bevanda -->
+                            <div class="mt-2">
+                                <div class="row">
+                                    <div class="col-2 d-flex justify-content-center">
+                                        <p property="oste"
+                                            mv-options="procione: 🦝, cane: 🐶,pinguino: 🐧,panda: 🐼, alieno: 👽, robot: 🤖, merda: 💩">
+                                        </p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p>></p>
+                                    </div>
+                                    <div class="col-3 d-flex justify-content-start">
+                                        <p property="servizio" mv-options="bevanda: bevanda 🍺,cibo: cibo 🍕"></p>
+                                    </div>
+                                    <div class="col d-flex justify-content-center">
+                                        <button type="button" class="mv-save btn btn-primary rounded mavo__save"
+                                            title="">Salva</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/archivio/" class="text-decoration-none">🗄 Visualizza archivio</a>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
