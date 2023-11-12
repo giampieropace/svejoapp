@@ -71,7 +71,7 @@
   display: none;
 }
 
-.mavo__entry:nth-child(-n + 20) {
+.mavo__entry:nth-child(-n + 200) {
   display: block;
 }
 
